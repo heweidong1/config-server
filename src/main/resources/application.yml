@@ -1,0 +1,24 @@
+server:
+  port: 7900
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/hwd1/env-project.git
+          username: 18233447759
+          password: a1394207767
+          search-paths: config-repo
+  application:
+    name: dm-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:7776/eureka/
+#开启用验证
+security:
+  basic:
+    enabled: true
+  user:
+    password: 123456
+    name: root
